@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: box-shadow 0.9s ease-in-out;
+    translate: 2px -2px;
+}
+h1{
+    color: #1096d4;
+    margin-bottom: 20px;
+    font-size: 36px;
+    border-bottom: 2px solid #1096d4;
+    text-align: center;
+}
+.user-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.user-info p{
+    font-size: 25px;
+    color: #7c7c7c;
+    margin: 5px 0;
+    padding: 8px;
+}
+.user-info p strong{
+    color: #6e90a1;
+}
+.actions button{
+    margin-top: 10px;
+    padding: 16px 32px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #1096d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+.actions button:hover{
+    background-color: #0e7ab3;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .user-info p {
+        font-size: 20px;
+    }
+    .actions button {
+        padding: 12px 24px;
+        font-size: 20px;
+    }
+    
+}
