@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/registerPageStyle.css">
+</head>
+<body>
+    <main>
+        <div class="register-container">
+            <a href="/" class="back-link">← Back to Home</a>
+            <div th:if="${successMessage}" class="success-message" th:text="${successMessage}"></div>
+            <div th:if="${failureMessage}" class="error-message" th:text="${failureMessage}"></div>
+            <h1>Create Account</h1>
+            <p>Join us today! Fill in your details to get started</p>            
+            <form action="/do-register" method="post" th:action="@{/do-register}">
+                <!-- CSRF token will be automatically added by Thymeleaf -->
+                <div class="form-group">
+                    <label for="fullname">
+                        <span class="input-label">Full Name</span>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </label>
+                    
+                    <label for="email">
+                        <span class="input-label">Email</span>
+                        <input type="email" id="email" name="email" required>
+                    </label>
+                    
+                    <label for="password">
+                        <span class="input-label">Password</span>
+                        <input type="password" id="password" name="password" required>
+                    </label>
+                    
+                    <label for="confirmPassword">
+                        <span class="input-label">Confirm Password</span>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </label>
+                    
+                    <div class="show-password">
+                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                        <span>Show passwords</span>
+                    </div>
+                    
+                    <button type="submit" class="register-button">Create Account</button>
+                    <p class="login-link">Already have an account? <a href="/login">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirmPassword');
+            const showPasswordCheckbox = document.getElementById('showPassword');
+            
+            passwordField.type = showPasswordCheckbox.checked ? 'text' : 'password';
+            confirmPasswordField.type = showPasswordCheckbox.checked ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>

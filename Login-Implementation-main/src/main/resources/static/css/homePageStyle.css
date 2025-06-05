@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+header{
+    margin-bottom: 38px;
+    padding: 40px 0px;
+    text-align: center;
+    border-bottom: 1px solid rgb(225, 228, 232);
+}
+
+h1 {
+    color: rgb(44, 62, 80);
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+p {
+    color: rgb(127, 140, 141);
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.auth-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.auth-card, .features-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    width: 300px;
+    text-align: center;
+}
+.auth-card h2, .features-card h2 {
+    color: rgb(68, 135, 201);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.auth-card a {
+    margin-top: 15px;
+    display: inline-block;
+    background-color: rgb(68, 135, 201);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.auth-card a:hover {
+    background-color: rgb(44, 62, 80);
+}
+.auth-card:hover, .features-card:hover {
+    transition: translateY(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.features-card ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.features-card li {
+    margin-bottom: 10px;
+    padding: 6px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid rgb(68, 135, 201);
+    border-radius: 6px;
+    padding-left: 10px;
+    list-style: none;
+    color: rgb(127, 140, 141);
+}
+@media screen and (max-width: 620px) {
+    .auth-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .auth-card, .features-card {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
